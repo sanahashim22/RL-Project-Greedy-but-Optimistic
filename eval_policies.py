@@ -1,15 +1,9 @@
-# from policy_test import get_win_percentages
-# from policy_random import Policy_Random
-# from policy_p55 import Policy_P55
-
-# print("Evaluating 1000 games (alternating starts)…")
-# print(get_win_percentages(1000, Policy_P55(), Policy_Random()))
 
 import random
-random.seed(42)    # choose any fixed int seed
+random.seed(42) 
 
 from policy_test import get_win_percentages
 from policy_random import Policy_Random
-from policy_p55 import Policy_P55
+from Policy_GreedyButOptimistic import Policy_GreedyButOptimistic
 
-print(get_win_percentages(1000, Policy_P55(), Policy_Random()))
+print(get_win_percentages(1000, Policy_GreedyButOptimistic(), Policy_Random()))

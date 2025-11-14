@@ -26,15 +26,32 @@ python ludo_images/4_4_dice_size.py
 }
 
 
-
-
-
 i already run it dont need to run it more because i pick best weights from this already
-python train_policy_p55.py
+python train_Policy_GreedyButOptimistic.py
+
+
+if you stil want to run then
+in policy file uncomment this
+        # self.w = {
+        #     "win": 250.0,
+        #     "capture": 70.0,
+        #     "home_path": 35.0,
+        #     "enter": 25.0,
+        #     "to_safe": 14.0,
+        #     "leave_safe": -9.0,
+        #     "progress": 0.55,
+        #     "risk_prob": -65.0,   
+        # }
+
+        for first time then after first training run comment this
+        and comment this line for first time
+        self.w = {'win': 250.73362524085192, 'capture': 71.23368106429712, 'home_path': 34.15364631867389, 'enter': 27.01776903313076, 'to_safe': 12.760536139947293, 'leave_safe': -8.584200788411554, 'progress': 0.5219101253152619, 'risk_prob': -63.64405793192719}
+        then after training uncomment this and copy the best weights from best_weights file and change it {'win'....} to that one
+
+
 
 
 run these everytime now:
-
 python eval_policies.py
 
 
