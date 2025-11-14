@@ -1,0 +1,41 @@
+
+once:
+{
+# In the project root:
+py -m venv .venv
+
+# Activate the virtualenv for this terminal session:
+.\.venv\Scripts\Activate.ps1
+
+
+If activation is blocked means error by PowerShell policy, run once:
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+then re‑run the activation command.
+
+
+once:
+python -m pip install --upgrade pip
+pip install pygame pillow imageio tqdm numpy
+pip install --upgrade imageio imageio-ffmpeg
+
+once:
+python ludo_images/1_1_get_images.py
+once: 
+python ludo_images/4_4_dice_size.py
+}
+
+
+
+
+
+i already run it dont need to run it more because i pick best weights from this already
+python train_policy_p55.py
+
+
+run these everytime now:
+
+python eval_policies.py
+
+
+python ludo.py
