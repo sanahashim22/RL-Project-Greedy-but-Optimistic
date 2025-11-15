@@ -56,3 +56,6 @@ python eval_policies.py
 
 
 python ludo.py
+
+
+for hardoced only python eval_policies.py will used in terminal
