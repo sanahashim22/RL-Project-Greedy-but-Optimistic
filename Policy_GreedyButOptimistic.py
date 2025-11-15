@@ -43,18 +43,19 @@ def _prob_capture_next_turn(newpos: int, opp_positions: list[int]) -> float:
 
 class Policy_GreedyButOptimistic:
     def __init__(self, weights=None):
-        # Defaults tuned to be aggressive but safe. You can re-tune with your trainer.
-        # self.w = {
-        #     "win": 250.0,
-        #     "capture": 70.0,
-        #     "home_path": 35.0,
-        #     "enter": 25.0,
-        #     "to_safe": 14.0,
-        #     "leave_safe": -9.0,
-        #     "progress": 0.55,
-        #     "risk_prob": -65.0,   
-        # }
-        self.w = {'win': 250.73362524085192, 'capture': 71.23368106429712, 'home_path': 34.15364631867389, 'enter': 27.01776903313076, 'to_safe': 12.760536139947293, 'leave_safe': -8.584200788411554, 'progress': 0.5219101253152619, 'risk_prob': -63.64405793192719}
+        # Defaults
+        self.w = {
+            "win": 250.0,
+            "capture": 70.0,
+            "home_path": 35.0,
+            "enter": 25.0,
+            "to_safe": 14.0,
+            "leave_safe": -9.0,
+            "progress": 0.55,
+            "risk_prob": -64.0,   
+        }
+        #trained best weight
+        # self.w = {'win': 250.73362524085192, 'capture': 71.23368106429712, 'home_path': 34.15364631867389, 'enter': 27.01776903313076, 'to_safe': 12.760536139947293, 'leave_safe': -8.584200788411554, 'progress': 0.5219101253152619, 'risk_prob': -63.64405793192719}
         if weights:
             self.w.update(weights)
 
